@@ -1,0 +1,27 @@
+---
+import GithubIcon from "../icons/GithubIcon.astro";
+import GoogleIcon from "../icons/GoogleIcon.astro";
+import LinkedinIcon from "../icons/LinkedinIcon.astro";
+---
+
+<footer>
+    <a class="profile__link" href="https://github.com/iDevLP"
+        ><GithubIcon width="32px" height="32px" color="white" /></a
+    >
+    <a class="profile__link" href="https://www.linkedin.com/in/devlp/"
+        ><LinkedinIcon width="32px" height="32px" color="white" /></a
+    >
+    <a class="profile__link" href="mailto:luispasten.devlp@gmail.com"
+        ><GoogleIcon width="32px" height="32px" color="white" /></a
+    >
+</footer>
+<style>
+    footer {
+        display: flex;
+        justify-content: end;
+        gap: 1rem;
+        padding: 2rem 0;
+        max-width: 1240px;
+        margin: auto;
+    }
+</style>

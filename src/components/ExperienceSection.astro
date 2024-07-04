@@ -1,0 +1,88 @@
+---
+import SectionTitle from "./SectionTitle.astro";
+import Tag from "./Tag.astro";
+---
+
+<section id="experiencia">
+    <SectionTitle
+        name="Experiencia"
+        description="Conoce los desafiós y trabajos en los cuales me eh desempeñado"
+    />
+    <section class="jobs">
+        <article class="section-shape">
+            <header>
+                <img src="" alt="" />
+            </header>
+            <section>
+                <header>
+                    <p class="experience__year">2023 - 2024</p>
+                    <h2 class="experience__title">Racing5</h2>
+                </header>
+                <p>
+                    Empresa líder dedicada al mundo automotriz y motorsport.
+                    Sitio auto-administrable en el cual se aplico un diseño
+                    responsivo y se desarrollaron funcionalidades específicas
+                    para plugins de wordpres con PHP y Javascript.
+                </p>
+            </section>
+            <footer>
+                <Tag tagname="Wordpress" />
+                <Tag tagname="Javascript" />
+                <Tag tagname="PHP" />
+                <Tag tagname="CSS" />
+            </footer>
+        </article>
+        <article class="section-shape">
+            <header>
+                <img src="" alt="" />
+            </header>
+            <section>
+                <header>
+                    <p class="experience__year">2024 - Presente</p>
+                    <h2 class="experience__title">Btrust Finance</h2>
+                </header>
+                <p>
+                    Empresa tecnológica comprometida en mejorar la salud
+                    financiera de pequeñas y grandes empresas. Se diseñan
+                    maquetas y prototipos funcionales en Figma y se desarrollan
+                    aplicaciones y sitios web en el ambito del frontend, backend
+                    y bases de datos.
+                </p>
+            </section>
+            <footer>
+                <Tag tagname="React" />
+                <Tag tagname="Typescript" />
+                <Tag tagname="AntDesign" />
+                <Tag tagname="C#" />
+                <Tag tagname="Next JS" />
+                <Tag tagname="Javascript" />
+                <Tag tagname="PHP" />
+                <Tag tagname="CSS" />
+            </footer>
+        </article>
+    </section>
+</section>
+<style>
+    p {
+        color: #ffffff80;
+    }
+    footer {
+        padding: 1rem 0 0 0;
+        display: flex;
+        gap: 1rem;
+        flex-wrap: wrap;
+    }
+    .jobs {
+        margin: 1rem 0 1rem 0;
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+    .experience__year {
+        color: var(--primary-color);
+        font-weight: 600;
+    }
+    header {
+        margin-bottom: 0.25rem;
+    }
+</style>

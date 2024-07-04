@@ -1,0 +1,41 @@
+---
+import { getCollection } from "astro:content";
+import SectionTitle from "./SectionTitle.astro";
+import BlogCard from "./BlogCard.astro";
+import Image from "astro/components/Image.astro";
+const allBlogPosts = await getCollection("posts");
+---
+
+<section id="proyectos">
+    <SectionTitle
+        name="Proyectos"
+        description="Descubre como fue el proceso de diseño y desarrollo de mis proyectos"
+    />
+    <section class="post-container">
+        {
+            allBlogPosts.map((post) => (
+                <BlogCard
+                    blogCardLink={post.slug}
+                    blogCardTitle={post.data.title}
+                    blogCardTags={post.data.tags}
+                    blogCardImage={post.data.image}
+                />
+            ))
+        }
+    </section>
+</section>
+<style>
+    .post-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1.5rem;
+        margin-top: 2rem;
+    }
+    @media (width < 800px) {
+        .post-container {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+    }
+</style>

@@ -1,0 +1,117 @@
+---
+import Logo from "../assets/luis.jpg";
+---
+
+<header>
+    <a class="logo" href="/">
+        <img src={Logo.src} alt="Imagen de Luis Pastén" />
+        <span> DEVLP </span>
+    </a>
+    <svg
+        id="openNavbar"
+        width="32px"
+        height="32px"
+        viewBox="0 0 24 24"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+    >
+        <path
+            fill-rule="evenodd"
+            clip-rule="evenodd"
+            d="M4 5C3.44772 5 3 5.44772 3 6C3 6.55228 3.44772 7 4 7H20C20.5523 7 21 6.55228 21 6C21 5.44772 20.5523 5 20 5H4ZM3 12C3 11.4477 3.44772 11 4 11H20C20.5523 11 21 11.4477 21 12C21 12.5523 20.5523 13 20 13H4C3.44772 13 3 12.5523 3 12ZM3 18C3 17.4477 3.44772 17 4 17H20C20.5523 17 21 17.4477 21 18C21 18.5523 20.5523 19 20 19H4C3.44772 19 3 18.5523 3 18Z"
+            fill="#FFF"></path>
+    </svg>
+    <nav>
+        <ul>
+            <li>
+                <a href="/#sobremi">Sobre mí</a>
+            </li>
+            <li>
+                <a href="/#experiencia">Experiencia</a>
+            </li>
+            <li>
+                <a href="/#educacion">Educación</a>
+            </li>
+            <li>
+                <a href="/#proyectos">Proyectos</a>
+            </li>
+            <li>
+                <a href="/#habilidades">Habilidades</a>
+            </li>
+        </ul>
+        <a class="call-to-action" href="">Trabajemos juntos</a>
+    </nav>
+</header>
+<script>
+    document.querySelector("#openNavbar")?.addEventListener("click", () => {
+        document
+            .querySelector("#responsiveNavbar")
+            ?.classList.remove("moveRight");
+    });
+</script>
+<style>
+    #openNavbar {
+        display: none;
+    }
+    nav {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+    }
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem 0;
+        max-width: 1240px;
+        margin: auto;
+    }
+    ul {
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+    }
+    a {
+        text-decoration: none;
+        color: white;
+        font-weight: 500;
+    }
+    .call-to-action {
+        display: inline-block;
+        color: white;
+        padding: 1rem;
+        background-color: var(--primary-color);
+        border-radius: 0.5rem;
+    }
+    .logo {
+        background-color: rgba(255, 255, 255, 0.1);
+        border-radius: 0.5rem;
+        padding: 0.5rem;
+        display: flex;
+        align-items: center;
+    }
+    .logo span {
+        display: inline-block;
+        padding: 0 1rem;
+        color: var(--primary-color);
+        font-weight: 600;
+    }
+    img {
+        width: 3rem;
+        height: 3rem;
+        object-fit: cover;
+        border-radius: 100%;
+        object-position: center;
+    }
+    @media (max-width: 768px) {
+        nav {
+            display: none;
+        }
+        #openNavbar {
+            display: inline-block;
+            cursor: pointer;
+        }
+    }
+</style>

@@ -1,0 +1,77 @@
+---
+import ImagenLuis from "../assets/luis.jpg";
+import GithubIcon from "../icons/GithubIcon.astro";
+import GoogleIcon from "../icons/GoogleIcon.astro";
+import LinkedinIcon from "../icons/LinkedinIcon.astro";
+---
+
+<section id="sobremi" class="left-side">
+    <section class="section-shape about">
+        <header>
+            <img src={ImagenLuis.src} alt="" />
+        </header>
+        <section>
+            <h2>Luis Pastén Jara</h2>
+            <span>Desarrollador y Diseñador Web</span>
+            <p>
+                Ayudo a las personas a comunicar sus ideas y ofrecer sus
+                servicios mediante la identificación de las necesidades de los
+                clientes y usuarios. Utilizo la arquitectura de la información y
+                el desarrollo de prototipos funcionales e interactivos de
+                interfaces digitales, asegurando criterios de accesibilidad,
+                usabilidad y diseño. Me apasiona crear cosas nuevas, y tengo un
+                gran interés en el diseño gráfico y la lógica de programación.
+            </p>
+        </section>
+        <footer>
+            <a class="profile__link" href="https://github.com/iDevLP"
+                ><GithubIcon width="32px" height="32px" color="white" /></a
+            >
+            <a class="profile__link" href="https://www.linkedin.com/in/devlp/"
+                ><LinkedinIcon width="32px" height="32px" color="white" /></a
+            >
+            <a class="profile__link" href="mailto:luispasten.devlp@gmail.com"
+                ><GoogleIcon width="32px" height="32px" color="white" /></a
+            >
+        </footer>
+    </section>
+</section>
+<style>
+    .left-side {
+        grid-column: span 4;
+    }
+    header {
+        display: flex;
+        justify-content: center;
+    }
+    img {
+        width: 200px;
+        height: 200px;
+        object-fit: cover;
+        object-position: center;
+        border-radius: 100%;
+    }
+    p {
+        color: #ffffff90;
+    }
+    span {
+        display: inline-block;
+        color: var(--primary-color);
+        font-weight: 600;
+        line-height: 150%;
+        margin-bottom: 0.25rem;
+    }
+    h2 {
+        margin-top: 1rem;
+    }
+    .about {
+        position: sticky;
+        top: 2rem;
+    }
+    footer {
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+        padding: 1rem 0 0 0;
+    }
+</style>
